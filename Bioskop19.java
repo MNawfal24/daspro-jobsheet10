@@ -18,10 +18,10 @@ public class Bioskop19 {
         System.out.println(penonton.length);
         for (String [] barisPenonton : penonton){
             System.out.println("panjang baris : " + barisPenonton.length);
-        }
-       System.out.println("penonton pada baris ke-3 : ");
-       for(String i : penonton[2]){
-        System.out.println(i);
-       }
+        } 
+
+      for (int i = 0; i < penonton.length; i++) {
+        System.out.println("Penontonpada baris ke-" + (i+1) + ": " + String.join(", ", penonton[i]));
+    }
     }
 }
