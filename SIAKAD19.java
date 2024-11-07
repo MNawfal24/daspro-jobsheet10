@@ -10,7 +10,7 @@ public class SIAKAD19 {
         int[][] nilai = new int[mahasiswa][matKul];
 
         for (int i = 0; i < nilai.length; i++ ) {
-            System.out.println("Input nilai mahasiswa ke-" + (i+1))
+            System.out.println("Input nilai mahasiswa ke-" + (i+1));
             for(int j =0 ; j< nilai[i].length; j++) {
                 System.out.println("Nilai mata kuliah " + (j+1) + ": " );
                 nilai[i][j] = sc.nextInt();
@@ -20,8 +20,8 @@ public class SIAKAD19 {
             System.out.println("Input nilai mahasiswa ke-" + (i+1));
             double totalPerSiswa = 0;
             
-            for(int j = 0; j < nilai[i].length; J++) {
-                System.out.print("Nilai mata kuliah " + (j+1) + ": ")
+            for(int j = 0; j < nilai[i].length; j++) {
+                System.out.print("Nilai mata kuliah " + (j+1) + ": ");
                 nilai[i][j] = sc.nextInt();
                 totalPerSiswa += nilai[i][j];
             }
@@ -30,13 +30,13 @@ public class SIAKAD19 {
         System.out.println("\n==============================");
         System.out.println("Rata - Rata Nilai setiap mata kuliah : ");
 
-        for (int j = 0; j< 3; j++) {
+        for (int j = 0; j< matKul; j++) {
             double totalPerMatkul = 0;
              
-            for(int i = 0;i < 4; i++) {
+            for(int i = 0;i < mahasiswa; i++) {
                 totalPerMatkul += nilai[i][j];
             }
-            System.out.println("Mata Kuliah " + (j+1) + ": " + totalPerMatkul /4);
+            System.out.println("Mata Kuliah " + (j+1) + ": " + totalPerMatkul / mahasiswa);
         }
 
     }

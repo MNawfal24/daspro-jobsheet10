@@ -32,13 +32,13 @@ public class BioskopWithScanner19 {
 
                         if(penonton[(baris-1)] [(kolom-1)] != "***"){
                             System.out.println("Kursi sudah ditempati, dimohon untuk melihat kursi yang kosong");
-                            break;
+                            continue;
                             
                         }
 
                         if(baris > penonton.length || kolom > penonton[0].length || baris <= 0 || kolom <= 0){
                             System.out.println("Kursi sudah ditempati, dimohon untuk melihat kursi yang kosong");
-                            break;
+                            continue;
                         }
 
                         penonton[(baris -  1)][(kolom - 1)] = nama;
