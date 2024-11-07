@@ -30,6 +30,17 @@ public class BioskopWithScanner19 {
 
                         sc.nextLine();
 
+                        if(penonton[(baris-1)] [(kolom-1)] != "***"){
+                            System.out.println("Kursi sudah ditempati, dimohon untuk melihat kursi yang kosong");
+                            break;
+                            
+                        }
+
+                        if(baris > penonton.length || kolom > penonton[0].length || baris <= 0 || kolom <= 0){
+                            System.out.println("Kursi sudah ditempati, dimohon untuk melihat kursi yang kosong");
+                            break;
+                        }
+
                         penonton[(baris -  1)][(kolom - 1)] = nama;
 
                         System.out.print("Input penonton lainya ? (y/n)");
@@ -47,6 +58,14 @@ public class BioskopWithScanner19 {
                 break;
                 default:
                     System.out.println("Masukkan Pilihan Yang Tersedia !");
+            }
+
+            for(int i = 0; i< penonton.length; i++){
+                for (int j = 0; j < penonton[i].length; j++) {
+                    if (penonton[i][j]== null) {
+                        penonton[i][j] = "***";
+                    }
+                }
             }
         }
     }
